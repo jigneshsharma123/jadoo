@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+    padding: 0;
+    background-image: url('../assets//img/Decore.svg'); /* Replace 'path/to/your/image.jpg' with the path to your image */
+    background-position: top right;
+    background-size:0; /* Adjust according to your image size */
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+.corner-image {
+    padding: 0;
+    background-image: url('../assets//img/Decore.svg'); /* Replace 'path/to/your/image.jpg' with the path to your image */
+    background-position: top right;
+    background-size: auto; /* Adjust according to your image size */
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -5em;
+    right:0;
+    left:36.9em;
+    
+    width: 1000px; /* Adjust width as needed */
+    height: 1000px; /* Adjust height as needed */
+    overflow: hidden; /* Hide the overflowing part */
+    z-index: -999; /* Ensure it stays on top of other content */
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: rgb(5, 5, 116);
+    padding-left: 20px;
+}
+
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.nav__link {
+    position: fixed;
+    width: 100%;
+    top: 5rem;
+    left: 0px;
+    background-color: rgb(230, 232, 233);
+}
+
+.nav__link a {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+    transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+.nav__link a:hover {
+    text-decoration: underline;
+}
+
+.hide {
+    display: none;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px; /* Adjust margin as per your design */
+    visibility: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    z-index: 1;
+    padding: 10px;
+}
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (min-width: 600px) {
+    .nav__link {
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 20px;
+        background: none;
+    }
+
+    .nav__link a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .dropdown {
+        visibility: visible; /* Set visibility to visible for desktop screens */
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content p {
+    color: red;
+    font-size: .8rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    color: #999;
+    font-size:3rem;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-container button {
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color:black ;
+    margin:5px;
+}
+
+.button-container button.btn1 {
+    background-color: orangered;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .button-container button {
+        font-size: 0.8rem;
+    }
+}
