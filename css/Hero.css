@@ -20,7 +20,7 @@ body {
     background-position: top right;
     background-size: auto; /* Adjust according to your image size */
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed;
     top: -5em;
     right:0;
     left:36.9em;
@@ -31,7 +31,11 @@ body {
     z-index: -999; /* Ensure it stays on top of other content */
 }
 
-
+@media screen and (max-width: 768px) {
+    .corner-image {
+        display: none; /* Hide the corner image on smaller devices */
+    }
+}
 a {
     text-decoration: none;
     color: black;
@@ -123,6 +127,7 @@ a {
 }
 
 @media screen and (min-width: 600px) {
+  
     .nav__link {
         display: block;
         position: static;
